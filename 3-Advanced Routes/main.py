@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def users():
 
 @app.route('/json')
 def json():
-    return jsonify({"key1": "value1", "key2": "value2"})
+    return {"key1": "value1", "key2": "value2"}
 
 
 @app.route('/body', methods=['POST'])
